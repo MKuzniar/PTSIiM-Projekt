@@ -1,0 +1,22 @@
+{% extends "web_app/doctor_home.html" %}
+
+{% block content %}
+
+    {% for d in data %}
+     <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <small class="text-muted">Patient: {{ d.patient_id }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ d.date_of_appointment }}</a></h2>
+          <div>
+               <small class="text-muted">Patient comment: {{ d.patient_com }}</small>
+          </div>
+          <div>
+              <small class="text-muted">Doctor comment: {{ d.doctor_com }}</small>
+          </div>
+      </div>
+    </article>
+    {% endfor %}
+
+ {% endblock content%}

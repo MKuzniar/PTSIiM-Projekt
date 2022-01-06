@@ -1,0 +1,17 @@
+{% extends "web_app/doctor_home.html" %}
+
+{% block content %}
+
+    {% for d in data %}
+     <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <small class="text-muted">Gender: {{ d.gender }}</small>
+          <small class="text-muted"> | Date of birth: {{ d.birthdate }}</small>
+      </div>
+        <h2><a class="article-title" href="#">{{ d.first_name }} {{ d.last_name }}</a></h2>
+      </div>
+     </article>
+    {% endfor %}
+
+ {% endblock content%}
